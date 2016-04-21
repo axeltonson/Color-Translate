@@ -4,13 +4,15 @@ document.querySelector('#convert_button').addEventListener('click', check)
 var error = false;
 var index = 0;
 function check() {
-    var inputLength = document.querySelector('input').value.length;
+    var inputValue = document.querySelector('input').value;
+    var inputLength = inputValue.length;
     check_length(inputLength);
-    if (error === false) {
-        converter();
+    check_char(inputValue)
+    if (error) {
+        document.querySelector('input').focus();
     }
     else {
-        document.querySelector('input').focus();
+        converter();
     }
 }
 
@@ -25,8 +27,26 @@ function check_length(length) {
     }
 }
 
+function check_char(value) {
+    for (var i = 0; i < value.length; i++) {
+        var result = /[0-9a-f]/.test(value[i]);
+        if (result) {
+            error = false;
+        }
+        else {
+            error = true;
+        }
+    }
+    if (error) {
+        document.querySelector('p').innerHTML = 'Wrong color code ! Only A to F and 0 to 9 charachters are valid. ex: ffe512';
+    }
+    else {
+        document.querySelector('p').innerHTML = '';
+    }
+}
+
 function converter() {
-    var fullHColor = document.querySelector('input').value;
+    var fullHColor = document.querySelector('input').value.toUpperCase();
     var red = convert_hex_to_dec(fullHColor.slice(0, 2));
     var green = convert_hex_to_dec(fullHColor.slice(2, 4));
     var blue = convert_hex_to_dec(fullHColor.slice(4, 6));
