@@ -1,3 +1,4 @@
+document.querySelector('input').focus();
 document.querySelector('#convert_button').addEventListener('click', converter)
 
 var index = 0;
