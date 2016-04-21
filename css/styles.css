@@ -1,0 +1,57 @@
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+header {
+    background:#4A4A4A;
+}
+
+header ul {
+    width:35vw;
+    margin: 0 auto;
+}
+
+header ul li {
+    text-align: center;
+    padding-top: 20px;
+}
+
+header ul li>span {
+    color:#FFF;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+header ul li input {
+    background:#4A4A4A;
+    color:#FFF;
+    font-size: 32px;
+    font-weight: 800;
+    border:0;
+    border-bottom:2px solid #AFAFAF;
+    outline:none;
+}
+
+header ul li:last-child {
+    padding-bottom:20px;
+}
+
+header h1 a{
+    color:#FFF;
+    font-size: 48px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+section {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+}
+
+.form {
+    width:12.5%;
+    height:150px;
+}
