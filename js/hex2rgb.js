@@ -1,15 +1,20 @@
-document.querySelector('input').focus();
+var focus = document.querySelector('input').focus();
+focus;
+
 document.querySelector('#convert_button').addEventListener('click', check)
+document.querySelector('#reset_button').addEventListener('click', reset)
+
+// CHECKING DATA ENTRY FUNCTIONS
 
 var error = false;
-var index = 0;
+
 function check() {
     var inputValue = document.querySelector('input').value;
     var inputLength = inputValue.length;
     check_length(inputLength);
     check_char(inputValue)
     if (error) {
-        document.querySelector('input').focus();
+        focus;
     }
     else {
         converter();
@@ -45,6 +50,10 @@ function check_char(value) {
     }
 }
 
+// CONVERSION FUNCTIONS
+
+var index = 0;
+
 function converter() {
     var fullHColor = document.querySelector('input').value.toUpperCase();
     var red = convert_hex_to_dec(fullHColor.slice(0, 2));
@@ -58,6 +67,8 @@ function convert_hex_to_dec(color) {
     return color;
 }
 
+// DISPLAY FUNCTION
+
 function print_it(red, green, blue) {
     var flux = '<div class="color' + index + ' form">' +
         'rgb(' + red + ',' + green + ',' + blue + ')' +
@@ -67,8 +78,13 @@ function print_it(red, green, blue) {
     index++;
 }
 
-// TODO : - faire les vérification sur le champ de formulaire
-// TODO : - faire le bouton reset
+// RESET FUNCTION
+
+function reset() {
+    document.querySelector('section').innerHTML = '';
+    focus;
+}
+
 // TODO : - possibilité de faire dec to hex
 // TODO : - système de carte pour sauver les couleurs précédemment convertis
 // TODO : - possibilité de copier les couleurs dans le presse papier
