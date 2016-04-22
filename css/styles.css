@@ -1,10 +1,11 @@
 body {
     font-family: 'Raleway', sans-serif;
+    background: #303030;
+    color: #FFF;
 }
 
 header {
     background:#4A4A4A;
-    color: #FFF;
 }
 
 header ul {
@@ -24,7 +25,6 @@ header ul li>span {
 
 header ul li input {
     width: 200px;
-    text-align: center;
     background:#4A4A4A;
     color:#FFF;
     font-size: 32px;
@@ -34,10 +34,14 @@ header ul li input {
     outline:none;
 }
 
-header button {
+button {
     width: 120px;
     height: 40px;
     box-shadow: 1px 1px 3px #000;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    -o-box-shadow: 1px 1px 3px #000;
+    filter: progid:DXImageTransform.Microsoft.Shadow(color=#000, Direction=134, Strength=3);
     border: 0;
     font-weight: 800;
     color: #fff;
@@ -79,6 +83,35 @@ section {
 }
 
 .form {
+    margin: 20px 0 0 20px;
     width:12.5%;
     height:150px;
+    box-shadow: 1px 1px 3px #000;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    -o-box-shadow: 1px 1px 3px #000;
+    filter: progid:DXImageTransform.Microsoft.Shadow(color=#000, Direction=134, Strength=3);
+}
+
+/**** FOOTER ****/
+footer {
+    height: 64px;
+    width: 100%;
+    background: #4A4A4A;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    line-height: 64px;
+    text-align: center;
+}
+
+footer small {
+    font-weight: 800;
+}
+
+footer button {
+    position: absolute;
+    right: 32px;
+    top: 3px;
+    background: #3B4357;
 }
