@@ -1,20 +1,23 @@
-var focus = document.querySelector('input').focus();
-focus;
+input_focus();
 
-document.querySelector('#convert_button').addEventListener('click', check)
-document.querySelector('#reset_button').addEventListener('click', reset)
+document.querySelector('#convert_button').addEventListener('click', check);
+document.querySelector('#reset_button').addEventListener('click', reset);
+
+// FOCUS FUNCTION
+function input_focus() {
+    document.querySelector('input').focus();
+}
 
 // CHECKING DATA ENTRY FUNCTIONS
-
 var error = false;
 
 function check() {
     var inputValue = document.querySelector('input').value;
     var inputLength = inputValue.length;
     check_length(inputLength);
-    check_char(inputValue)
+    check_char(inputValue);
     if (error) {
-        focus;
+        input_focus();
     }
     else {
         converter();
@@ -35,12 +38,7 @@ function check_length(length) {
 function check_char(value) {
     for (var i = 0; i < value.length; i++) {
         var result = /[0-9a-f]/.test(value[i]);
-        if (result) {
-            error = false;
-        }
-        else {
-            error = true;
-        }
+        result === true ? error = false : error = true;
     }
     if (error) {
         document.querySelector('p').innerHTML = 'Wrong color code ! Only A to F and 0 to 9 charachters are valid. ex: ffe512';
@@ -51,7 +49,6 @@ function check_char(value) {
 }
 
 // CONVERSION FUNCTIONS
-
 var index = 0;
 
 function converter() {
@@ -68,7 +65,6 @@ function convert_hex_to_dec(color) {
 }
 
 // DISPLAY FUNCTION
-
 function print_it(red, green, blue) {
     var flux = '<div class="color' + index + ' form">' +
         'rgb(' + red + ',' + green + ',' + blue + ')' +
@@ -79,10 +75,11 @@ function print_it(red, green, blue) {
 }
 
 // RESET FUNCTION
-
 function reset() {
+    document.querySelector('input').value = '';
     document.querySelector('section').innerHTML = '';
-    focus;
+    document.querySelector('p').innerHTML = '';
+    input_focus();
 }
 
 // TODO : - possibilité de faire dec to hex
