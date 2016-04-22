@@ -23,6 +23,8 @@ header ul li>span {
 }
 
 header ul li input {
+    width: 200px;
+    text-align: center;
     background:#4A4A4A;
     color:#FFF;
     font-size: 32px;
@@ -30,6 +32,26 @@ header ul li input {
     border:0;
     border-bottom:2px solid #AFAFAF;
     outline:none;
+}
+
+header button {
+    width: 120px;
+    height: 40px;
+    box-shadow: 1px 1px 3px #000;
+    border: 0;
+    font-weight: 800;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 10px;
+    outline: none;
+}
+
+#convert_button {
+    background: #709643;
+}
+
+#reset_button {
+    background: #B0300D;
 }
 
 header ul li p {
