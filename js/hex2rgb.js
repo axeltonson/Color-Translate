@@ -12,7 +12,8 @@ function input_focus() {
 var error = false;
 
 function check() {
-    var inputValue = document.querySelector('input').value;
+    var inputValue = document.querySelector('input').value.toLowerCase();
+    console.log(inputValue);
     var inputLength = inputValue.length;
     check_length(inputLength);
     check_char(inputValue);
@@ -52,7 +53,7 @@ function check_char(value) {
 var index = 0;
 
 function converter() {
-    var fullHColor = document.querySelector('input').value.toUpperCase();
+    var fullHColor = document.querySelector('input').value;
     var red = convert_hex_to_dec(fullHColor.slice(0, 2));
     var green = convert_hex_to_dec(fullHColor.slice(2, 4));
     var blue = convert_hex_to_dec(fullHColor.slice(4, 6));
@@ -83,5 +84,5 @@ function reset() {
 }
 
 // TODO : - possibilité de faire dec to hex
-// TODO : - système de carte pour sauver les couleurs précédemment convertis
+// TODO : - système de carte pour sauver les couleurs précédemment convertis /JSON ? LOCALSTORAGE
 // TODO : - possibilité de copier les couleurs dans le presse papier
