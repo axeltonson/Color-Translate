@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3aaa7b4a-cf8f-48ac-922a-78e7eac70f68" name="Default" comment="graphic improvement">
+    <list default="true" id="3aaa7b4a-cf8f-48ac-922a-78e7eac70f68" name="Default" comment="minor bugfix">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css" afterPath="$PROJECT_DIR$/css/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/hex2rgb.js" afterPath="$PROJECT_DIR$/js/hex2rgb.js" />
     </list>
     <ignored path="color-translate.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,8 +47,8 @@
       <file leaf-file-name="styles.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="101" column="13" selection-start-line="101" selection-start-column="13" selection-end-line="101" selection-end-column="13" />
+            <state relative-caret-position="1400">
+              <caret line="50" column="20" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -57,10 +57,10 @@
       <file leaf-file-name="hex2rgb.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/hex2rgb.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="78" column="47" selection-start-line="78" selection-start-column="47" selection-end-line="78" selection-end-column="47" />
+            <state relative-caret-position="2380">
+              <caret line="85" column="21" selection-start-line="85" selection-start-column="21" selection-end-line="85" selection-end-column="21" />
               <folding>
-                <marker date="1461321029485" expanded="true" signature="1796:1871" placeholder="..." />
+                <marker date="1461434275497" expanded="true" signature="1825:1900" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -75,8 +75,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/js/hex2rgb.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/hex2rgb.js" />
         <option value="$PROJECT_DIR$/css/styles.css" />
       </list>
     </option>
@@ -213,7 +213,7 @@
       <updated>1461233862866</updated>
       <workItem from="1461233864310" duration="12035000" />
       <workItem from="1461254196255" duration="2708000" />
-      <workItem from="1461312657686" duration="11566000" />
+      <workItem from="1461312657686" duration="14056000" />
     </task>
     <task id="LOCAL-00001" summary="focus on the input added">
       <created>1461238520839</created>
@@ -264,11 +264,18 @@
       <option name="project" value="LOCAL" />
       <updated>1461321158415</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="graphic improvement">
+      <created>1461340189467</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1461340189467</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26309000" />
+    <option name="totallyTimeSpent" value="28799000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -314,7 +321,8 @@
     <MESSAGE value="bug fix on focus" />
     <MESSAGE value="bug fix" />
     <MESSAGE value="graphic improvement" />
-    <option name="LAST_COMMIT_MESSAGE" value="graphic improvement" />
+    <MESSAGE value="minor bugfix" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor bugfix" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -344,7 +352,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1461321029485" expanded="true" signature="1796:1871" placeholder="..." />
+            <marker date="1461434275497" expanded="true" signature="1825:1900" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -370,7 +378,7 @@
         <state relative-caret-position="952">
           <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
           <folding>
-            <marker date="1461321029485" expanded="true" signature="1796:1871" placeholder="..." />
+            <marker date="1461434275497" expanded="true" signature="1825:1900" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -391,16 +399,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/hex2rgb.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="78" column="47" selection-start-line="78" selection-start-column="47" selection-end-line="78" selection-end-column="47" />
-          <folding>
-            <marker date="1461321029485" expanded="true" signature="1796:1871" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="487">
@@ -409,10 +407,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/hex2rgb.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2380">
+          <caret line="85" column="21" selection-start-line="85" selection-start-column="21" selection-end-line="85" selection-end-column="21" />
+          <folding>
+            <marker date="1461434275497" expanded="true" signature="1825:1900" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="101" column="13" selection-start-line="101" selection-start-column="13" selection-end-line="101" selection-end-column="13" />
+        <state relative-caret-position="1400">
+          <caret line="50" column="20" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
           <folding />
         </state>
       </provider>
