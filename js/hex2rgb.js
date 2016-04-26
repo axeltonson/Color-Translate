@@ -37,12 +37,13 @@ function check_length(length) {
 }
 
 function check_char(value) {
+    var countError = 0;
     for (var i = 0; i < value.length; i++) {
         var result = /[0-9a-f]/.test(value[i]);
-        result === true ? error = false : error = true;
+        result === false ? countError++ : countError += 0;
     }
-    if (error) {
-        document.querySelector('p').innerHTML = 'Wrong color code ! Only A to F and 0 to 9 charachters are valid. ex: ffe512';
+    if (countError != 0) {
+        document.querySelector('p').innerHTML = 'Wrong color code ! Only A to F and 0 to 9 characters are valid. ex: ffe512';
     }
     else {
         document.querySelector('p').innerHTML = '';
@@ -50,8 +51,6 @@ function check_char(value) {
 }
 
 // CONVERSION FUNCTIONS
-var index = 0;
-
 function converter() {
     var fullHColor = document.querySelector('input').value;
     var red = convert_hex_to_dec(fullHColor.slice(0, 2));
@@ -66,6 +65,7 @@ function convert_hex_to_dec(color) {
 }
 
 // DISPLAY FUNCTION
+var index = 0;
 function print_it(red, green, blue) {
     var flux = '<div class="color' + index + ' form">' +
         'rgb(' + red + ',' + green + ',' + blue + ')' +
@@ -82,7 +82,3 @@ function reset() {
     document.querySelector('p').innerHTML = '';
     input_focus();
 }
-
-// TODO : - possibilité de faire dec to hex
-// TODO : - système de carte pour sauver les couleurs précédemment convertis /JSON ? LOCALSTORAGE
-// TODO : - possibilité de copier les couleurs dans le presse papier
