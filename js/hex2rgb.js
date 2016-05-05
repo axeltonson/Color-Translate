@@ -65,10 +65,12 @@ function convert_hex_to_dec(color) {
 }
 
 // DISPLAY FUNCTION
-var index = 0;
+var index = 0
+var selectButton = '<button class="select'+ index +'">copy me</button>';
 function print_it(red, green, blue) {
     var flux = '<div class="color' + index + ' form">' +
-        'rgb(' + red + ',' + green + ',' + blue + ')' +
+        'rgb ( ' + red + ', ' + green + ', ' + blue + ' )' +
+        selectButton +
         '</div>';
     document.querySelector('section').innerHTML += flux;
     document.querySelector('.color' + index).style.background = 'rgb(' + red + ',' + green + ',' + blue + ')';

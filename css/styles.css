@@ -51,6 +51,14 @@ button {
     cursor: pointer;
 }
 
+button:active {
+    box-shadow: 0 0 3px #000;
+    -moz-box-shadow: 0 0 3px #000;
+    -webkit-box-shadow: 0 0 3px #000;
+    -o-box-shadow: 0 0 3px #000;
+    filter: progid:DXImageTransform.Microsoft.Shadow(color=#000, Direction=0, Strength=3);
+}
+
 #convert_button {
     background: #709643;
 }
@@ -85,6 +93,7 @@ section {
 
 .form {
     margin: 20px 0 0 20px;
+    padding:10px;
     width:12.5%;
     height:150px;
     box-shadow: 1px 1px 3px #000;
@@ -92,6 +101,17 @@ section {
     -webkit-box-shadow: 1px 1px 3px #000;
     -o-box-shadow: 1px 1px 3px #000;
     filter: progid:DXImageTransform.Microsoft.Shadow(color=#000, Direction=134, Strength=3);
+    text-align: center;
+    text-shadow: 1px 1px 3px #000;
+    font-weight: 800;
+}
+
+div.form button {
+    height:30px;
+    width:80px;
+    font-size:12px;
+    font-weight: 800;
+    color:#4A4A4A;
 }
 
 /**** FOOTER ****/
