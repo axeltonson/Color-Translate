@@ -5,11 +5,11 @@ body {
 }
 
 header {
-    background:#4A4A4A;
+    background: #4A4A4A;
 }
 
 header ul {
-    width:35vw;
+    width: 35vw;
     margin: 0 auto;
 }
 
@@ -18,20 +18,20 @@ header ul li {
     padding-top: 20px;
 }
 
-header ul li>span {
+header ul li > span {
     font-size: 32px;
     font-weight: 800;
 }
 
 header ul li input {
     width: 200px;
-    background:#4A4A4A;
-    color:#FFF;
+    background: #4A4A4A;
+    color: #FFF;
     font-size: 32px;
     font-weight: 800;
-    border:0;
-    border-bottom:2px solid #AFAFAF;
-    outline:none;
+    border: 0;
+    border-bottom: 2px solid #AFAFAF;
+    outline: none;
 }
 
 button {
@@ -73,18 +73,18 @@ header ul li p {
 }
 
 header ul li:last-child {
-    padding-bottom:20px;
+    padding-bottom: 20px;
 }
 
-header h1 a{
-    color:#FFF;
+header h1 a {
+    color: #FFF;
     font-size: 48px;
     font-weight: 800;
     text-decoration: none;
 }
 
 section {
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
@@ -93,9 +93,10 @@ section {
 
 .form {
     margin: 20px 0 0 20px;
-    padding:10px;
-    width:12.5%;
-    height:150px;
+    padding: 10px;
+    width: 12.5%;
+    min-width: 160px;
+    height: 200px;
     box-shadow: 1px 1px 3px #000;
     -moz-box-shadow: 1px 1px 3px #000;
     -webkit-box-shadow: 1px 1px 3px #000;
@@ -104,14 +105,16 @@ section {
     text-align: center;
     text-shadow: 1px 1px 3px #000;
     font-weight: 800;
+    text-transform: uppercase;
+    font-family: verdana;
 }
 
 div.form button {
-    height:30px;
-    width:80px;
-    font-size:12px;
+    height: 30px;
+    width: 90px;
+    font-size: 12px;
     font-weight: 800;
-    color:#4A4A4A;
+    color: #4A4A4A;
 }
 
 /**** FOOTER ****/

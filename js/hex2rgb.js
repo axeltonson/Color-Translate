@@ -13,7 +13,6 @@ var error = false;
 
 function check() {
     var inputValue = document.querySelector('input').value.toLowerCase();
-    console.log(inputValue);
     var inputLength = inputValue.length;
     check_length(inputLength);
     check_char(inputValue);
@@ -56,7 +55,9 @@ function converter() {
     var red = convert_hex_to_dec(fullHColor.slice(0, 2));
     var green = convert_hex_to_dec(fullHColor.slice(2, 4));
     var blue = convert_hex_to_dec(fullHColor.slice(4, 6));
-    print_it(red, green, blue);
+    print_dec(red, green, blue);
+    print_hex(fullHColor);
+    print_comp_color(get_comp_color(red, green, blue));
 }
 
 function convert_hex_to_dec(color) {
@@ -64,16 +65,38 @@ function convert_hex_to_dec(color) {
     return color;
 }
 
+function get_comp_color(red, green, blue) {
+    var redComp = 255 - red;
+    var greenComp = 255 - green;
+    var blueComp = 255 - blue;
+    var compColor = 'rgb(' + redComp + ',' + greenComp + ',' + blueComp + ')';
+    return compColor;
+}
+
 // DISPLAY FUNCTION
 var index = 0
-var selectButton = '<button class="select'+ index +'">copy me</button>';
-function print_it(red, green, blue) {
+var rgbButton = '<button class="select' + index + '">copy RGB</button>';
+function print_dec(red, green, blue) {
     var flux = '<div class="color' + index + ' form">' +
-        'rgb ( ' + red + ', ' + green + ', ' + blue + ' )' +
-        selectButton +
+        '<p>rgb(' + red + ',' + green + ',' + blue + ')</p>' +
+        rgbButton +
         '</div>';
     document.querySelector('section').innerHTML += flux;
     document.querySelector('.color' + index).style.background = 'rgb(' + red + ',' + green + ',' + blue + ')';
+}
+
+function print_hex(hex_code) {
+    var hexButton = '<button class="select' + index + '">copy HEX</button>';
+    var flux = '<p>' +
+        '#' + hex_code +
+        '</p>' +
+        hexButton;
+    document.querySelector('.color' + index).innerHTML += flux;
+}
+
+function print_comp_color(comp_color) {
+    var flux = '<p style="width:100%;background:'+comp_color+'">complementary color</p>';
+    document.querySelector('.color' + index).innerHTML += flux;
     index++;
 }
 
