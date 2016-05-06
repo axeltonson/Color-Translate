@@ -34,6 +34,14 @@ header ul li input {
     outline: none;
 }
 
+::selection {
+    background: #EEE;
+}
+
+::-moz-selection {
+    background: #EEE;
+}
+
 button {
     width: 120px;
     height: 40px;
