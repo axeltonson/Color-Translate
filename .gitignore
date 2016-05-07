@@ -2,3 +2,4 @@
 
 # ignore the phpstorm project directory
 .idea
+/js/jscolor.min.js
